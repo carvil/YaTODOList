@@ -19,14 +19,17 @@
     UIBarButtonItem *addItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target: self action:@selector(addTodoItem)];
     self.navigationItem.rightBarButtonItem = addItem;
     
-    NSArray *temp = [[NSArray alloc] initWithObjects:@"todo 1", @"todo 2", nil];
+    NSMutableArray *temp = [[NSMutableArray alloc] init];
     self.todos = temp;
     [temp release];
+    
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -52,7 +55,7 @@
         [temp release];
     }
     
-    self.newTodoItem.todos = self.todos;
+    [self.newTodoItem setTodos: self.todos];
     
     [self.navigationController pushViewController:self.newTodoItem animated:YES];
 }
@@ -73,7 +76,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [todos count];
+    return [self.todos count];
 }
 
 // Customize the appearance of table view cells.
@@ -86,7 +89,9 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
 
-    cell.textLabel.text = [self.todos objectAtIndex:[indexPath row]];
+    ItemModel *item = [[ItemModel alloc] init];
+    item = [self.todos objectAtIndex:[indexPath row]];
+    cell.textLabel.text = item.todoText;
     // Configure the cell.
     return cell;
 }

@@ -11,11 +11,11 @@
 
 @interface RootViewController : UITableViewController {
 
-    NSArray *todos;
+    NSMutableArray *todos;
     NewTodoItem *newTodoItem;
 }
 
-@property (nonatomic, retain) NSArray *todos;
+@property (nonatomic, retain) NSMutableArray *todos;
 @property (nonatomic, retain) NewTodoItem *newTodoItem;
 
 - (void) addTodoItem;

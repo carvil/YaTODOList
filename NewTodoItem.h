@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ItemModel.h"
+
 
 
 @interface NewTodoItem : UIViewController {
@@ -14,7 +16,7 @@
     UILabel *todoLabel;
     UINavigationBar *navigationBar;
     UIDatePicker *deadline;
-    NSArray *todos;
+    NSMutableArray *todos;
 }
 
 @property (nonatomic, retain) IBOutlet UITextField *todoTitle;
@@ -22,6 +24,6 @@
 @property (nonatomic, retain) IBOutlet UINavigationBar *navigationBar;
 @property (nonatomic, retain) IBOutlet UIDatePicker *deadline;
 
-@property (nonatomic, retain) NSArray *todos;
+@property (nonatomic, retain) NSMutableArray *todos;
 
 @end

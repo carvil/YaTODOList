@@ -48,12 +48,6 @@
     UIBarButtonItem *addItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target: self action:@selector(saveTodoItem)];
     self.navigationItem.rightBarButtonItem = addItem;
     
-    
-    
-    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Array element" message:[self.todos objectAtIndex:0] delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil, nil];
-
-    [av show];
-    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -68,6 +62,18 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void) saveTodoItem {
+    
+    ItemModel *item = [[ItemModel alloc] init];
+    item.todoText = [self.todoTitle text];
+    item.deadline = [self.deadline date];
+    [self.todos addObject:item];
+    [item release];
+    
+    [self.navigationController popViewControllerAnimated:YES];
+  
 }
 
 @end
