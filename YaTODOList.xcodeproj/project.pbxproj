@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E18BF0FE139B9EFB00D2090F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18BF0FD139B9EFB00D2090F /* UIKit.framework */; };
+		E18BF100139B9EFB00D2090F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18BF0FF139B9EFB00D2090F /* Foundation.framework */; };
+		E18BF102139B9EFB00D2090F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18BF101139B9EFB00D2090F /* CoreGraphics.framework */; };
+		E18BF108139B9EFB00D2090F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E18BF106139B9EFB00D2090F /* InfoPlist.strings */; };
+		E18BF10B139B9EFB00D2090F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E18BF10A139B9EFB00D2090F /* main.m */; };
+		E18BF10E139B9EFB00D2090F /* YaTODOListAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E18BF10D139B9EFB00D2090F /* YaTODOListAppDelegate.m */; };
+		E18BF111139B9EFC00D2090F /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E18BF10F139B9EFB00D2090F /* MainWindow.xib */; };
+		E18BF114139B9EFC00D2090F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E18BF113139B9EFC00D2090F /* RootViewController.m */; };
+		E18BF117139B9EFC00D2090F /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E18BF115139B9EFC00D2090F /* RootViewController.xib */; };
+		E18BF11E139B9EFC00D2090F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18BF0FD139B9EFB00D2090F /* UIKit.framework */; };
+		E18BF11F139B9EFC00D2090F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18BF0FF139B9EFB00D2090F /* Foundation.framework */; };
+		E18BF120139B9EFC00D2090F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18BF101139B9EFB00D2090F /* CoreGraphics.framework */; };
+		E18BF128139B9EFC00D2090F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E18BF126139B9EFC00D2090F /* InfoPlist.strings */; };
+		E18BF12B139B9EFC00D2090F /* YaTODOListTests.h in Resources */ = {isa = PBXBuildFile; fileRef = E18BF12A139B9EFC00D2090F /* YaTODOListTests.h */; };
+		E18BF12D139B9EFC00D2090F /* YaTODOListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E18BF12C139B9EFC00D2090F /* YaTODOListTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E18BF121139B9EFC00D2090F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E18BF0F0139B9EFB00D2090F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E18BF0F8139B9EFB00D2090F;
+			remoteInfo = YaTODOList;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E18BF0F9139B9EFB00D2090F /* YaTODOList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YaTODOList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E18BF0FD139B9EFB00D2090F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E18BF0FF139B9EFB00D2090F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E18BF101139B9EFB00D2090F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E18BF105139B9EFB00D2090F /* YaTODOList-Info.plist */ = {isa = PBXFileReference; path = "YaTODOList-Info.plist"; sourceTree = "<group>"; };
+		E18BF107139B9EFB00D2090F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E18BF109139B9EFB00D2090F /* YaTODOList-Prefix.pch */ = {isa = PBXFileReference; path = "YaTODOList-Prefix.pch"; sourceTree = "<group>"; };
+		E18BF10A139B9EFB00D2090F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E18BF10C139B9EFB00D2090F /* YaTODOListAppDelegate.h */ = {isa = PBXFileReference; path = YaTODOListAppDelegate.h; sourceTree = "<group>"; };
+		E18BF10D139B9EFB00D2090F /* YaTODOListAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YaTODOListAppDelegate.m; sourceTree = "<group>"; };
+		E18BF110139B9EFC00D2090F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		E18BF112139B9EFC00D2090F /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
+		E18BF113139B9EFC00D2090F /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		E18BF116139B9EFC00D2090F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+		E18BF11D139B9EFC00D2090F /* YaTODOListTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YaTODOListTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E18BF125139B9EFC00D2090F /* YaTODOListTests-Info.plist */ = {isa = PBXFileReference; path = "YaTODOListTests-Info.plist"; sourceTree = "<group>"; };
+		E18BF127139B9EFC00D2090F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E18BF129139B9EFC00D2090F /* YaTODOListTests-Prefix.pch */ = {isa = PBXFileReference; path = "YaTODOListTests-Prefix.pch"; sourceTree = "<group>"; };
+		E18BF12A139B9EFC00D2090F /* YaTODOListTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YaTODOListTests.h; sourceTree = "<group>"; };
+		E18BF12C139B9EFC00D2090F /* YaTODOListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YaTODOListTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E18BF0F6139B9EFB00D2090F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E18BF0FE139B9EFB00D2090F /* UIKit.framework in Frameworks */,
+				E18BF100139B9EFB00D2090F /* Foundation.framework in Frameworks */,
+				E18BF102139B9EFB00D2090F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E18BF119139B9EFC00D2090F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E18BF11E139B9EFC00D2090F /* UIKit.framework in Frameworks */,
+				E18BF11F139B9EFC00D2090F /* Foundation.framework in Frameworks */,
+				E18BF120139B9EFC00D2090F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E18BF0EE139B9EFB00D2090F = {
+			isa = PBXGroup;
+			children = (
+				E18BF103139B9EFB00D2090F /* YaTODOList */,
+				E18BF123139B9EFC00D2090F /* YaTODOListTests */,
+				E18BF0FC139B9EFB00D2090F /* Frameworks */,
+				E18BF0FA139B9EFB00D2090F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E18BF0FA139B9EFB00D2090F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E18BF0F9139B9EFB00D2090F /* YaTODOList.app */,
+				E18BF11D139B9EFC00D2090F /* YaTODOListTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E18BF0FC139B9EFB00D2090F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E18BF0FD139B9EFB00D2090F /* UIKit.framework */,
+				E18BF0FF139B9EFB00D2090F /* Foundation.framework */,
+				E18BF101139B9EFB00D2090F /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E18BF103139B9EFB00D2090F /* YaTODOList */ = {
+			isa = PBXGroup;
+			children = (
+				E18BF10C139B9EFB00D2090F /* YaTODOListAppDelegate.h */,
+				E18BF10D139B9EFB00D2090F /* YaTODOListAppDelegate.m */,
+				E18BF10F139B9EFB00D2090F /* MainWindow.xib */,
+				E18BF112139B9EFC00D2090F /* RootViewController.h */,
+				E18BF113139B9EFC00D2090F /* RootViewController.m */,
+				E18BF115139B9EFC00D2090F /* RootViewController.xib */,
+				E18BF104139B9EFB00D2090F /* Supporting Files */,
+			);
+			path = YaTODOList;
+			sourceTree = "<group>";
+		};
+		E18BF104139B9EFB00D2090F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E18BF105139B9EFB00D2090F /* YaTODOList-Info.plist */,
+				E18BF106139B9EFB00D2090F /* InfoPlist.strings */,
+				E18BF109139B9EFB00D2090F /* YaTODOList-Prefix.pch */,
+				E18BF10A139B9EFB00D2090F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E18BF123139B9EFC00D2090F /* YaTODOListTests */ = {
+			isa = PBXGroup;
+			children = (
+				E18BF12A139B9EFC00D2090F /* YaTODOListTests.h */,
+				E18BF12C139B9EFC00D2090F /* YaTODOListTests.m */,
+				E18BF124139B9EFC00D2090F /* Supporting Files */,
+			);
+			path = YaTODOListTests;
+			sourceTree = "<group>";
+		};
+		E18BF124139B9EFC00D2090F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E18BF125139B9EFC00D2090F /* YaTODOListTests-Info.plist */,
+				E18BF126139B9EFC00D2090F /* InfoPlist.strings */,
+				E18BF129139B9EFC00D2090F /* YaTODOListTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E18BF0F8139B9EFB00D2090F /* YaTODOList */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E18BF130139B9EFC00D2090F /* Build configuration list for PBXNativeTarget "YaTODOList" */;
+			buildPhases = (
+				E18BF0F5139B9EFB00D2090F /* Sources */,
+				E18BF0F6139B9EFB00D2090F /* Frameworks */,
+				E18BF0F7139B9EFB00D2090F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YaTODOList;
+			productName = YaTODOList;
+			productReference = E18BF0F9139B9EFB00D2090F /* YaTODOList.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E18BF11C139B9EFC00D2090F /* YaTODOListTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E18BF133139B9EFC00D2090F /* Build configuration list for PBXNativeTarget "YaTODOListTests" */;
+			buildPhases = (
+				E18BF118139B9EFC00D2090F /* Sources */,
+				E18BF119139B9EFC00D2090F /* Frameworks */,
+				E18BF11A139B9EFC00D2090F /* Resources */,
+				E18BF11B139B9EFC00D2090F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E18BF122139B9EFC00D2090F /* PBXTargetDependency */,
+			);
+			name = YaTODOListTests;
+			productName = YaTODOListTests;
+			productReference = E18BF11D139B9EFC00D2090F /* YaTODOListTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E18BF0F0139B9EFB00D2090F /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = E18BF0F3139B9EFB00D2090F /* Build configuration list for PBXProject "YaTODOList" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E18BF0EE139B9EFB00D2090F;
+			productRefGroup = E18BF0FA139B9EFB00D2090F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E18BF0F8139B9EFB00D2090F /* YaTODOList */,
+				E18BF11C139B9EFC00D2090F /* YaTODOListTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E18BF0F7139B9EFB00D2090F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E18BF108139B9EFB00D2090F /* InfoPlist.strings in Resources */,
+				E18BF111139B9EFC00D2090F /* MainWindow.xib in Resources */,
+				E18BF117139B9EFC00D2090F /* RootViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E18BF11A139B9EFC00D2090F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E18BF128139B9EFC00D2090F /* InfoPlist.strings in Resources */,
+				E18BF12B139B9EFC00D2090F /* YaTODOListTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E18BF11B139B9EFC00D2090F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E18BF0F5139B9EFB00D2090F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E18BF10B139B9EFB00D2090F /* main.m in Sources */,
+				E18BF10E139B9EFB00D2090F /* YaTODOListAppDelegate.m in Sources */,
+				E18BF114139B9EFC00D2090F /* RootViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E18BF118139B9EFC00D2090F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E18BF12D139B9EFC00D2090F /* YaTODOListTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E18BF122139B9EFC00D2090F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E18BF0F8139B9EFB00D2090F /* YaTODOList */;
+			targetProxy = E18BF121139B9EFC00D2090F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E18BF106139B9EFB00D2090F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E18BF107139B9EFB00D2090F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E18BF10F139B9EFB00D2090F /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E18BF110139B9EFC00D2090F /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		E18BF115139B9EFC00D2090F /* RootViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E18BF116139B9EFC00D2090F /* en */,
+			);
+			name = RootViewController.xib;
+			sourceTree = "<group>";
+		};
+		E18BF126139B9EFC00D2090F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E18BF127139B9EFC00D2090F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E18BF12E139B9EFC00D2090F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E18BF12F139B9EFC00D2090F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		E18BF131139B9EFC00D2090F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "YaTODOList/YaTODOList-Prefix.pch";
+				INFOPLIST_FILE = "YaTODOList/YaTODOList-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E18BF132139B9EFC00D2090F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "YaTODOList/YaTODOList-Prefix.pch";
+				INFOPLIST_FILE = "YaTODOList/YaTODOList-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E18BF134139B9EFC00D2090F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/YaTODOList.app/YaTODOList";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "YaTODOListTests/YaTODOListTests-Prefix.pch";
+				INFOPLIST_FILE = "YaTODOListTests/YaTODOListTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		E18BF135139B9EFC00D2090F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/YaTODOList.app/YaTODOList";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "YaTODOListTests/YaTODOListTests-Prefix.pch";
+				INFOPLIST_FILE = "YaTODOListTests/YaTODOListTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E18BF0F3139B9EFB00D2090F /* Build configuration list for PBXProject "YaTODOList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E18BF12E139B9EFC00D2090F /* Debug */,
+				E18BF12F139B9EFC00D2090F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E18BF130139B9EFC00D2090F /* Build configuration list for PBXNativeTarget "YaTODOList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E18BF131139B9EFC00D2090F /* Debug */,
+				E18BF132139B9EFC00D2090F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E18BF133139B9EFC00D2090F /* Build configuration list for PBXNativeTarget "YaTODOListTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E18BF134139B9EFC00D2090F /* Debug */,
+				E18BF135139B9EFC00D2090F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E18BF0F0139B9EFB00D2090F /* Project object */;
+}

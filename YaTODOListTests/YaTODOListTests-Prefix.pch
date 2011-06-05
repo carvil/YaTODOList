@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'YaTODOListTests' target in the 'YaTODOListTests' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif
