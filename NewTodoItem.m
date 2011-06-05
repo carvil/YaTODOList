@@ -29,6 +29,11 @@
 - (void)dealloc
 {
     [super dealloc];
+    [self.todoTitle dealloc];
+    [self.todoLabel dealloc];
+    [self.deadline dealloc];
+    [self.navigationBar dealloc];
+    [self.todos dealloc];
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,7 +53,22 @@
     UIBarButtonItem *addItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target: self action:@selector(saveTodoItem)];
     self.navigationItem.rightBarButtonItem = addItem;
     
-    // Do any additional setup after loading the view from its nib.
+    //Change 'return' with 'done' in keyboard
+    self.todoTitle.returnKeyType = UIReturnKeyDone;
+    
+    //Enable keyboard dismiss when tapping outside
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
+}
+
+- (void) viewDidDisappear:(BOOL)animated {
+    [self.todoTitle setText:nil];
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    NSDate* now = [[NSDate alloc] init];
+    self.deadline.date = now;
+    [now release];
 }
 
 - (void)viewDidUnload
@@ -75,5 +95,19 @@
     [self.navigationController popViewControllerAnimated:YES];
   
 }
+
+// Allow to dismiss the keyboard after clicking Done
+- (BOOL)textFieldShouldReturn: (UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
+// Dismiss keyboard if user taps in another part of the screen 
+-(void)dismissKeyboard {
+    [self.todoTitle resignFirstResponder];
+}
+
+
+
 
 @end
