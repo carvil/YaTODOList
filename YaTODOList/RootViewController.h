@@ -19,5 +19,6 @@
 @property (nonatomic, retain) NewTodoItem *newTodoItem;
 
 - (void) addTodoItem;
+- (IBAction) editTable:(id)sender;
 
 @end

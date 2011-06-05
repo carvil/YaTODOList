@@ -16,8 +16,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationItem setTitle:@"TODO"];
+    
+    //Add the Add button
     UIBarButtonItem *addItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target: self action:@selector(addTodoItem)];
     self.navigationItem.rightBarButtonItem = addItem;
+    
+    //Add the Edit button
+    UIBarButtonItem *deleteItem = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonSystemItemEdit target:self action:@selector(editTable:)];
+    self.navigationItem.leftBarButtonItem = deleteItem;
     
     NSMutableArray *temp = [[NSMutableArray alloc] init];
     self.todos = temp;
@@ -47,26 +53,14 @@
 	[super viewDidDisappear:animated];
 }
 
-- (void) addTodoItem {
-    
-    if (self.newTodoItem == nil) {
-        NewTodoItem *temp = [[NewTodoItem alloc] initWithNibName:@"NewTodoItem" bundle:[NSBundle mainBundle]];
-        self.newTodoItem = temp;
-        [temp release];
-    }
-    
-    [self.newTodoItem setTodos: self.todos];
-    
-    [self.navigationController pushViewController:self.newTodoItem animated:YES];
-}
 
-/*
+
  // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
 	// Return YES for supported orientations.
 	return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
- */
+
 
 // Customize the number of sections in the table view.
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -76,7 +70,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.todos count];
+    NSInteger count = [self.todos count];
+
+    return count;
 }
 
 // Customize the appearance of table view cells.
@@ -105,21 +101,23 @@
 }
 
 
-/*
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete)
     {
         // Delete the row from the data source.
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        //[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [self.todos removeObjectAtIndex:indexPath.row];
+        [self.tableView reloadData];
     }
     else if (editingStyle == UITableViewCellEditingStyleInsert)
     {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
     }   
 }
-*/
+
 
 /*
 // Override to support rearranging the table view.
@@ -164,10 +162,46 @@
     // For example: self.myOutlet = nil;
 }
 
+
 - (void)dealloc
 {
     [super dealloc];
     [todos release];
 }
+
+- (void) addTodoItem {
+    
+    if (self.newTodoItem == nil) {
+        NewTodoItem *temp = [[NewTodoItem alloc] initWithNibName:@"NewTodoItem" bundle:[NSBundle mainBundle]];
+        self.newTodoItem = temp;
+        [temp release];
+    }
+    
+    [self.newTodoItem setTodos: self.todos];
+    
+    [self.navigationController pushViewController:self.newTodoItem animated:YES];
+}
+
+
+- (IBAction) editTable:(id)sender {
+
+    if(self.editing)
+    {
+        [super setEditing:NO animated:NO];
+        [self.tableView setEditing:NO animated:NO];
+        [self.tableView reloadData];
+        [self.navigationItem.leftBarButtonItem setTitle:@"Edit"];
+        [self.navigationItem.leftBarButtonItem setStyle:UIBarButtonItemStylePlain];
+    }
+    else
+    {
+        [super setEditing:YES animated:YES];
+        [self.tableView setEditing:YES animated:YES];
+        [self.tableView reloadData];
+        [self.navigationItem.leftBarButtonItem setTitle:@"Done"];
+        [self.navigationItem.leftBarButtonItem setStyle:UIBarButtonItemStyleDone];
+    }
+}
+
 
 @end
