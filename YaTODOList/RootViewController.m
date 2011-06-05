@@ -10,9 +10,18 @@
 
 @implementation RootViewController
 
-- (void)viewDidLoad
-{
+@synthesize todos;
+@synthesize newTodoItem;
+
+- (void)viewDidLoad {
     [super viewDidLoad];
+    [self.navigationItem setTitle:@"TODO"];
+    UIBarButtonItem *addItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target: self action:@selector(addTodoItem)];
+    self.navigationItem.rightBarButtonItem = addItem;
+    
+    NSArray *temp = [[NSArray alloc] initWithObjects:@"todo 1", @"todo 2", nil];
+    self.todos = temp;
+    [temp release];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -35,6 +44,19 @@
 	[super viewDidDisappear:animated];
 }
 
+- (void) addTodoItem {
+    
+    if (self.newTodoItem == nil) {
+        NewTodoItem *temp = [[NewTodoItem alloc] initWithNibName:@"NewTodoItem" bundle:[NSBundle mainBundle]];
+        self.newTodoItem = temp;
+        [temp release];
+    }
+    
+    self.newTodoItem.todos = self.todos;
+    
+    [self.navigationController pushViewController:self.newTodoItem animated:YES];
+}
+
 /*
  // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -51,12 +73,12 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return [todos count];
 }
 
 // Customize the appearance of table view cells.
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -64,18 +86,19 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
 
+    cell.textLabel.text = [self.todos objectAtIndex:[indexPath row]];
     // Configure the cell.
     return cell;
 }
 
-/*
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
+
 
 /*
 // Override to support editing the table view.
@@ -139,6 +162,7 @@
 - (void)dealloc
 {
     [super dealloc];
+    [todos release];
 }
 
 @end

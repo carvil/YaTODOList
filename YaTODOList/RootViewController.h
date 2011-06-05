@@ -7,10 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NewTodoItem.h"
 
 @interface RootViewController : UITableViewController {
 
+    NSArray *todos;
+    NewTodoItem *newTodoItem;
 }
 
+@property (nonatomic, retain) NSArray *todos;
+@property (nonatomic, retain) NewTodoItem *newTodoItem;
+
+- (void) addTodoItem;
 
 @end
